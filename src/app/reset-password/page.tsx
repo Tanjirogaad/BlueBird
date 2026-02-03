@@ -220,7 +220,7 @@ export default function ResetPasswordPage() {
     setLoading(true);
     try {
       const response = await axios.patch(
-        "https://backend-five-indol-46.vercel.app/api/employee/forgot-password",
+        "https://backend-pink-six-75.vercel.app/api/employee/forgot-password",
         {
           email: formData.email,
           SocialInsuranceNumber: formData.SocialInsuranceNumber,

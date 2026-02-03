@@ -33,7 +33,7 @@ export default function Login() {
       if (!accessToken) return;
 
       try {
-        await axios.get("https://backend-five-indol-46.vercel.app/api/employee/profile", {
+        await axios.get("https://backend-pink-six-75.vercel.app/api/employee/profile", {
           headers: { Authorization: `Bearer ${accessToken}` },
         });
         if (!mounted) return;
@@ -47,7 +47,7 @@ export default function Login() {
 
         try {
           const res = await axios.post(
-            "https://backend-five-indol-46.vercel.app/api/employee/refresh-token",
+            "https://backend-pink-six-75.vercel.app/api/employee/refresh-token",
             { refreshToken },
           );
 
@@ -113,7 +113,7 @@ export default function Login() {
     setLoading(true);
     try {
       const response = await axios.post(
-        "https://backend-five-indol-46.vercel.app/api/employee/login",
+        "https://backend-pink-six-75.vercel.app/api/employee/login",
         account,
       );
 

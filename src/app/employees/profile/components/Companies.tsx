@@ -35,7 +35,7 @@ export default function Companies() {
     try {
       setLoading(true);
       const res = await axios.get(
-        "https://backend-five-indol-46.vercel.app/api/companies/get-companies",
+        "https://backend-pink-six-75.vercel.app/api/companies/get-companies",
       );
       setCompanies(res.data.companies || []);
       setError(null);
@@ -61,7 +61,7 @@ export default function Companies() {
         return;
       }
       await axios.post(
-        "https://backend-five-indol-46.vercel.app/api/companies/register-company",
+        "https://backend-pink-six-75.vercel.app/api/companies/register-company",
         company,
       );
       // إعادة جلب البيانات وإعادة تعيين النموذج
