@@ -89,7 +89,7 @@ export default function RegisterEmployees() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
     section: string,
-    field: string
+    field: string,
   ) => {
     const value = e.target.value;
 
@@ -225,8 +225,8 @@ export default function RegisterEmployees() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/employee/register-employee",
-        formData
+        "https://backend-pink-six-75.vercel.app/api/employee/register-employee",
+        formData,
       );
       console.log(response);
       alert("تم تسجيل الموظف بنجاح!");
