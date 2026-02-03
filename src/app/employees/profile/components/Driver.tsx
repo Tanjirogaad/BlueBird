@@ -33,7 +33,7 @@ export default function Drivers() {
     try {
       setLoading(true);
       const res = await axios.get(
-        "http://192.168.1.168:4000/api/driver/get-drivers",
+        "https://backend-five-indol-46.vercel.app/api/driver/get-drivers",
       );
       setDrivers(res.data.drivers || []);
       setError(null);

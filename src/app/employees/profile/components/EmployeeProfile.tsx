@@ -120,7 +120,7 @@ export default function EmployeeProfile({ employee }: { employee: Employee }) {
 
     try {
       const response = await axios.patch(
-        "http://192.168.1.168:4000/api/employee/change-password",
+        "https://backend-five-indol-46.vercel.app/api/employee/change-password",
         newPassword,
       );
       if (response.data.message === "Password reset successfully") {

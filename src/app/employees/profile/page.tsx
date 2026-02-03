@@ -41,7 +41,7 @@ export default function ProfilePage() {
     if (!accessToken) throw new Error("No access token found");
 
     const res = await axios.get<ProfileResponse>(
-      "http://192.168.1.168:4000/api/employee/profile",
+      "https://backend-five-indol-46.vercel.app/api/employee/profile",
       {
         headers: { Authorization: `Bearer ${accessToken}` },
       },
@@ -54,7 +54,7 @@ export default function ProfilePage() {
     if (!refreshToken) throw new Error("No refresh token found");
 
     const res = await axios.post<RefreshTokenResponse>(
-      "http://192.168.1.168:4000/api/employee/refresh-token",
+      "https://backend-five-indol-46.vercel.app/api/employee/refresh-token",
       { refreshtoken: refreshToken },
     );
     return res.data.accessToken;
